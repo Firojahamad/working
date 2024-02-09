@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 3: Operators and Expressions</title>
+    <style>
+        /* Add specific styles for Unit 3 content here if needed */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4CAF50;
+        }
+    </style>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KW3NTGCB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <div class="content">
+        <h2>Unit 3: Operators and Expressions</h2>
+        <h3>Operators</h3>
+        <p>Operators in Java are symbols that perform operations on variables and values. Java supports various types of operators:</p>
+
+        <ul>
+            <li><strong>Arithmetic Operators:</strong> +, -, *, /, %</li>
+            <li><strong>Relational Operators:</strong> ==, !=, >, <, >=, <=</li>
+            <li><strong>Logical Operators:</strong> && (and), || (or), ! (not)</li>
+            <li><strong>Assignment Operators:</strong> =, +=, -=, *=, /=, %=</li>
+            <li><strong>Increment and Decrement Operators:</strong> ++, --</li>
+            <!-- Add more operators as needed -->
+        </ul>
+
+        <h3>Expressions</h3>
+        <p>An expression is a combination of variables, operators, and values that produces a result when evaluated. Expressions are an essential part of Java programming.</p>
+
+        <p>Example:</p>
+        <code>
+            int x = 5;<br>
+            int y = 10;<br>
+            int result = x + y; // Addition<br>
+            System.out.println("Result: " + result); // Output: Result: 15
+        </code>
+
+        <!-- Add more content for Unit 3 here -->
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgressBar();
+        });
+
+        function updateProgressBar() {
+            // Retrieve the user's progress from localStorage
+            const userProgress = localStorage.getItem('userProgress');
+
+            // Set the progress bar width based on the user's progress
+            const progressBar = document.getElementById('progress-bar');
+            if (userProgress) {
+                const progressPercentage = parseInt(userProgress, 10);
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+        }
+
+        // Example: Call this function when the user completes Unit 3
+        markUnitComplete(3);
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3NTGCB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

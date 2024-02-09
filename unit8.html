@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 8: Interfaces and Abstract Classes</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KW3NTGCB');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+    <div class="content">
+        <h2>Unit 8: Interfaces and Abstract Classes</h2>
+        <h3>Interfaces</h3>
+        <p>An interface in Java is a collection of abstract methods. It defines a contract that implementing classes must adhere to. Interfaces support multiple inheritance, allowing a class to implement multiple interfaces.</p>
+
+        <code>
+            // Example of an interface<br>
+            interface Shape {<br>
+                void draw();<br>
+                double calculateArea();<br>
+            }<br>
+
+            // Example of a class implementing an interface<br>
+            class Circle implements Shape {<br>
+                void draw() {<br>
+                    System.out.println("Drawing a circle");<br>
+                }<br>
+
+                double calculateArea() {<br>
+                    // Implementation of area calculation for a circle<br>
+                    return 3.14 * radius * radius;<br>
+                }<br>
+            }<br>
+        </code>
+
+        <h3>Abstract Classes</h3>
+        <p>An abstract class in Java is a class that cannot be instantiated on its own and may contain abstract methods. Abstract methods are declared without implementation and must be implemented by subclasses.</p>
+
+        <code>
+            // Example of an abstract class<br>
+            abstract class Shape {<br>
+                abstract void draw();<br>
+                abstract double calculateArea();<br>
+            }<br>
+
+            // Example of a subclass extending an abstract class<br>
+            class Circle extends Shape {<br>
+                void draw() {<br>
+                    System.out.println("Drawing a circle");<br>
+                }<br>
+
+                double calculateArea() {<br>
+                    // Implementation of area calculation for a circle<br>
+                    return 3.14 * radius * radius;<br>
+                }<br>
+            }<br>
+        </code>
+
+        <!-- Add more content for Unit 8 here -->
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgressBar();
+        });
+
+        function updateProgressBar() {
+            // Retrieve the user's progress from localStorage
+            const userProgress = localStorage.getItem('userProgress');
+
+            // Set the progress bar width based on the user's progress
+            const progressBar = document.getElementById('progress-bar');
+            if (userProgress) {
+                const progressPercentage = parseInt(userProgress, 10);
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+        }
+
+        // Example: Call this function when the user completes Unit 8
+        markUnitComplete(8);
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3NTGCB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

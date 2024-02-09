@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KW3NTGCB');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>Unit 9: Exceptions and File Handling</title>
+    <style>
+        /* Add specific styles for Unit 9 content here if needed */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Unit 9: Exceptions and File Handling</h2>
+        <h3>Exceptions</h3>
+        <p>Exceptions in Java are events that occur during the execution of a program and disrupt the normal flow of instructions. Handling exceptions is crucial for creating robust and reliable software.</p>
+
+        <code>
+            // Example of try-catch block for handling exceptions<br>
+            try {<br>
+                // Code that may cause an exception<br>
+                int result = divide(10, 0); // This will throw an ArithmeticException<br>
+            } catch (ArithmeticException e) {<br>
+                // Code to handle the exception<br>
+                System.out.println("Error: Division by zero");<br>
+            }<br>
+
+            // Custom exception class<br>
+            class CustomException extends Exception {<br>
+                CustomException(String message) {<br>
+                    super(message);<br>
+                }<br>
+            }<br>
+        </code>
+
+        <h3>File Handling</h3>
+        <p>File handling in Java involves reading from and writing to files. Java provides classes like `File`, `FileReader`, `FileWriter`, etc., for file-related operations.</p>
+
+        <code>
+            // Example of reading from a file using FileReader<br>
+            try (FileReader reader = new FileReader("example.txt")) {<br>
+                int character;<br>
+                while ((character = reader.read()) != -1) {<br>
+                    // Process the character read from the file<br>
+                }<br>
+            } catch (IOException e) {<br>
+                // Handle IO exception<br>
+            }<br>
+
+            // Example of writing to a file using FileWriter<br>
+            try (FileWriter writer = new FileWriter("output.txt")) {<br>
+                writer.write("Hello, this is a sample text.");<br>
+            } catch (IOException e) {<br>
+                // Handle IO exception<br>
+            }<br>
+        </code>
+
+        <!-- Add more content for Unit 9 here -->
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgressBar();
+        });
+
+        function updateProgressBar() {
+            // Retrieve the user's progress from localStorage
+            const userProgress = localStorage.getItem('userProgress');
+
+            // Set the progress bar width based on the user's progress
+            const progressBar = document.getElementById('progress-bar');
+            if (userProgress) {
+                const progressPercentage = parseInt(userProgress, 10);
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+        }
+
+        // Example: Call this function when the user completes Unit 9
+        markUnitComplete(9);
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3NTGCB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

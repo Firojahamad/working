@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 1: Introduction to Java</title>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KW3NTGCB');</script>
+    <!-- End Google Tag Manager -->
+    <style>
+        /* Add specific styles for Unit 1 content here if needed */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Unit 1: Introduction to Java</h2>
+        <h3>The History of Java</h3>
+        <p>Java is a programming language that was first released by Sun Microsystems in 1995. It was designed by James Gosling and his team with the intention of creating a language that could run on any device, known as the "Write Once, Run Anywhere" (WORA) principle.</p>
+
+        <p>Key points in the history of Java include:</p>
+        <ul>
+            <li>1991: The project that would become Java started under the name "Oak."</li>
+            <li>1995: The official release of Java 1.0 by Sun Microsystems.</li>
+            <li>1996: The introduction of the Java Applet for web browsers.</li>
+            <li>1998: The release of Java 2 (J2SE 1.2) with significant improvements.</li>
+            <li>2004: Java underwent a major overhaul with the release of Java 5 (J2SE 5.0), introducing features like generics and metadata annotations.</li>
+            <li>2010: Oracle Corporation acquired Sun Microsystems, becoming the new steward of Java.</li>
+            <li>2014: The release of Java 8 brought lambdas and the Stream API.</li>
+            <li>2017: Java 9 introduced the module system.</li>
+            <li>2020: The latest LTS (Long-Term Support) version, Java 11, is widely used in enterprise environments.</li>
+        </ul>
+
+        <p>Java's versatility, portability, and backward compatibility have contributed to its continued popularity in various domains, including web development, mobile applications, and enterprise solutions.</p>
+
+        <!-- Add more content for Unit 1 here -->
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgressBar();
+        });
+
+        function updateProgressBar() {
+            // Retrieve the user's progress from localStorage
+            const userProgress = localStorage.getItem('userProgress');
+
+            // Set the progress bar width based on the user's progress
+            const progressBar = document.getElementById('progress-bar');
+            if (userProgress) {
+                const progressPercentage = parseInt(userProgress, 10);
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+        }
+
+        // Example: Call this function when the user completes Unit 1
+        markUnitComplete(1);
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3NTGCB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

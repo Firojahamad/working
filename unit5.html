@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 5: Arrays and ArrayLists</title>
+    <style>
+        /* Add specific styles for Unit 5 content here if needed */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4CAF50;
+        }
+    </style>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KW3NTGCB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <div class="content">
+        <h2>Unit 5: Arrays and ArrayLists</h2>
+        <h3>Arrays</h3>
+        <p>An array in Java is a data structure that allows you to store multiple values of the same type under a single variable name. The elements in an array can be accessed using an index.</p>
+
+        <code>
+            // Declaration and initialization of an array<br>
+            int[] numbers = {1, 2, 3, 4, 5};<br>
+
+            // Accessing elements of the array<br>
+            int thirdElement = numbers[2]; // Value: 3<br>
+
+            // Modifying elements of the array<br>
+            numbers[1] = 10; // Array becomes: {1, 10, 3, 4, 5}<br>
+        </code>
+
+        <h3>ArrayLists</h3>
+        <p>ArrayList is a part of the Java Collection Framework and provides dynamic resizing, which means you can add or remove elements at runtime. It is part of the `java.util` package.</p>
+
+        <code>
+            // Import the ArrayList class<br>
+            import java.util.ArrayList;<br>
+
+            // Declaration and initialization of an ArrayList<br>
+            ArrayList<String> colors = new ArrayList<>();<br>
+
+            // Adding elements to the ArrayList<br>
+            colors.add("Red");<br>
+            colors.add("Green");<br>
+            colors.add("Blue");<br>
+
+            // Accessing elements of the ArrayList<br>
+            String secondColor = colors.get(1); // Value: "Green"<br>
+
+            // Modifying elements of the ArrayList<br>
+            colors.set(0, "Yellow"); // ArrayList becomes: {"Yellow", "Green", "Blue"}<br>
+        </code>
+
+        <!-- Add more content for Unit 5 here -->
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgressBar();
+        });
+
+        function updateProgressBar() {
+            // Retrieve the user's progress from localStorage
+            const userProgress = localStorage.getItem('userProgress');
+
+            // Set the progress bar width based on the user's progress
+            const progressBar = document.getElementById('progress-bar');
+            if (userProgress) {
+                const progressPercentage = parseInt(userProgress, 10);
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+        }
+
+        // Example: Call this function when the user completes Unit 5
+        markUnitComplete(5);
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3NTGCB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

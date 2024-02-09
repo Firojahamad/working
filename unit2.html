@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 2: Variables and Data Types</title>
+    <style>
+        /* Add specific styles for Unit 2 content here if needed */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4CAF50;
+        }
+    </style>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KW3NTGCB');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <div class="content">
+        <h2>Unit 2: Variables and Data Types</h2>
+        <h3>Variables</h3>
+        <p>In Java, a variable is a container that holds data that can be manipulated during the program's execution. Variables must be declared with a specific data type, and they can be assigned values that match the declared type.</p>
+
+        <p>Example:</p>
+        <code>
+            int age; // Declaration of an integer variable<br>
+            age = 25; // Assignment of a value to the variable<br>
+            System.out.println("Age: " + age); // Output: Age: 25
+        </code>
+
+        <h3>Data Types</h3>
+        <p>Java supports various data types, including:</p>
+        <ul>
+            <li><strong>Primitive Data Types:</strong>
+                <ul>
+                    <li>int: Integer data type</li>
+                    <li>double: Double-precision floating-point data type</li>
+                    <li>char: Character data type</li>
+                    <li>boolean: Boolean data type</li>
+                    <!-- Add more primitive data types as needed -->
+                </ul>
+            </li>
+            <li><strong>Reference Data Types:</strong>
+                <ul>
+                    <li>String: Represents a sequence of characters</li>
+                    <li>Arrays: Holds a collection of elements of the same type</li>
+                    <!-- Add more reference data types as needed -->
+                </ul>
+            </li>
+        </ul>
+
+        <p>It's essential to choose the appropriate data type based on the type of data you want to store.</p>
+
+        <!-- Add more content for Unit 2 here -->
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgressBar();
+        });
+
+        function updateProgressBar() {
+            // Retrieve the user's progress from localStorage
+            const userProgress = localStorage.getItem('userProgress');
+
+            // Set the progress bar width based on the user's progress
+            const progressBar = document.getElementById('progress-bar');
+            if (userProgress) {
+                const progressPercentage = parseInt(userProgress, 10);
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+        }
+
+        // Example: Call this function when the user completes Unit 2
+        markUnitComplete(2);
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3NTGCB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

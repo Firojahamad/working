@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 4: Control Flow Statements</title>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KW3NTGCB');</script>
+    <!-- End Google Tag Manager -->
+    <style>
+        /* Add specific styles for Unit 4 content here if needed */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Unit 4: Control Flow Statements</h2>
+        <h3>Conditional Statements (if, else if, else)</h3>
+        <p>Conditional statements allow you to control the flow of your program based on certain conditions. The basic structure includes:</p>
+
+        <code>
+            if (condition) {<br>
+                // Code to be executed if the condition is true<br>
+            } else if (anotherCondition) {<br>
+                // Code to be executed if anotherCondition is true<br>
+            } else {<br>
+                // Code to be executed if no conditions are true<br>
+            }
+        </code>
+
+        <h3>Switch Statement</h3>
+        <p>The switch statement allows you to select one of many code blocks to be executed. It's often used as an alternative to long chains of if-else statements.</p>
+
+        <code>
+            int day = 3;<br>
+            switch (day) {<br>
+                case 1:<br>
+                    System.out.println("Monday");<br>
+                    break;<br>
+                case 2:<br>
+                    System.out.println("Tuesday");<br>
+                    break;<br>
+                // Add more cases as needed<br>
+                default:<br>
+                    System.out.println("Unknown day");<br>
+            }
+        </code>
+
+        <h3>Looping Statements (for, while, do-while)</h3>
+        <p>Looping statements allow you to execute a block of code repeatedly.</p>
+
+        <code>
+            // Example of a for loop<br>
+            for (int i = 0; i < 5; i++) {<br>
+                // Code to be executed in each iteration<br>
+            }<br>
+
+            // Example of a while loop<br>
+            int count = 0;<br>
+            while (count < 5) {<br>
+                // Code to be executed in each iteration<br>
+                count++;<br>
+            }<br>
+
+            // Example of a do-while loop<br>
+            int num = 0;<br>
+            do {<br>
+                // Code to be executed in each iteration<br>
+                num++;<br>
+            } while (num < 5);<br>
+        </code>
+
+        <!-- Add more content for Unit 4 here -->
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgressBar();
+        });
+
+        function updateProgressBar() {
+            // Retrieve the user's progress from localStorage
+            const userProgress = localStorage.getItem('userProgress');
+
+            // Set the progress bar width based on the user's progress
+            const progressBar = document.getElementById('progress-bar');
+            if (userProgress) {
+                const progressPercentage = parseInt(userProgress, 10);
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+        }
+
+        // Example: Call this function when the user completes Unit 4
+        markUnitComplete(4);
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3NTGCB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

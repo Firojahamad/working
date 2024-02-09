@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 7: Inheritance and Polymorphism</title>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KW3NTGCB');</script>
+    <!-- End Google Tag Manager -->
+    <style>
+        /* Add specific styles for Unit 7 content here if needed */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Unit 7: Inheritance and Polymorphism</h2>
+        <h3>Inheritance</h3>
+        <p>Inheritance is a fundamental concept in Object-Oriented Programming that allows a new class to inherit the characteristics and behaviors of an existing class. The existing class is referred to as the superclass or parent class, and the new class is the subclass or child class.</p>
+
+        <code>
+            // Example of a superclass (parent class)<br>
+            class Animal {<br>
+                void eat() {<br>
+                    System.out.println("Animal is eating");<br>
+                }<br>
+            }<br>
+
+            // Example of a subclass (child class) inheriting from Animal<br>
+            class Dog extends Animal {<br>
+                void bark() {<br>
+                    System.out.println("Dog is barking");<br>
+                }<br>
+            }<br>
+        </code>
+
+        <h3>Polymorphism</h3>
+        <p>Polymorphism allows objects to be treated as instances of their parent class, promoting flexibility and reusability of code. There are two types of polymorphism: compile-time (method overloading) and runtime (method overriding).</p>
+
+        <code>
+            // Example of compile-time polymorphism (method overloading)<br>
+            class Calculator {<br>
+                int add(int a, int b) {<br>
+                    return a + b;<br>
+                }<br>
+
+                double add(double a, double b) {<br>
+                    return a + b;<br>
+                }<br>
+            }<br>
+
+            // Example of runtime polymorphism (method overriding)<br>
+            class Shape {<br>
+                void draw() {<br>
+                    System.out.println("Drawing a shape");<br>
+                }<br>
+            }<br>
+
+            class Circle extends Shape {<br>
+                void draw() {<br>
+                    System.out.println("Drawing a circle");<br>
+                }<br>
+            }<br>
+        </code>
+
+        <!-- Add more content for Unit 7 here -->
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgressBar();
+        });
+
+        function updateProgressBar() {
+            // Retrieve the user's progress from localStorage
+            const userProgress = localStorage.getItem('userProgress');
+
+            // Set the progress bar width based on the user's progress
+            const progressBar = document.getElementById('progress-bar');
+            if (userProgress) {
+                const progressPercentage = parseInt(userProgress, 10);
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+        }
+
+        // Example: Call this function when the user completes Unit 7
+        markUnitComplete(7);
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3NTGCB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

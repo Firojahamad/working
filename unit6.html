@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 6: Object-Oriented Programming</title>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KW3NTGCB');</script>
+    <!-- End Google Tag Manager -->
+    <style>
+        /* Add specific styles for Unit 6 content here if needed */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #progress-bar-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            margin-top: 20px;
+        }
+
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>Unit 6: Object-Oriented Programming</h2>
+        <p>Object-Oriented Programming (OOP) is a programming paradigm that uses objects to organize code. In Java, everything is treated as an object. Key concepts of OOP in Java include:</p>
+
+        <h3>Classes and Objects</h3>
+        <p>A class is a blueprint for creating objects, and objects are instances of a class. Each object has its own state and behavior.</p>
+
+        <code>
+            // Example of a simple class<br>
+            class Car {<br>
+                String brand;<br>
+                String model;<br>
+                int year;<br>
+            }<br>
+
+            // Creating an object of the class Car<br>
+            Car myCar = new Car();<br>
+            myCar.brand = "Toyota";<br>
+            myCar.model = "Camry";<br>
+            myCar.year = 2022;<br>
+        </code>
+
+        <h3>Encapsulation</h3>
+        <p>Encapsulation is the bundling of data (attributes) and methods (functions) that operate on the data into a single unit, i.e., a class.</p>
+
+        <h3>Inheritance</h3>
+        <p>Inheritance is a mechanism in which one class acquires the properties and behaviors of another class. It promotes code reusability and establishes a relationship between classes.</p>
+
+        <h3>Polymorphism</h3>
+        <p>Polymorphism allows objects of different types to be treated as objects of a common type. It includes method overloading and method overriding.</p>
+
+        <!-- Add more content for Unit 6 here -->
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            updateProgressBar();
+        });
+
+        function updateProgressBar() {
+            // Retrieve the user's progress from localStorage
+            const userProgress = localStorage.getItem('userProgress');
+
+            // Set the progress bar width based on the user's progress
+            const progressBar = document.getElementById('progress-bar');
+            if (userProgress) {
+                const progressPercentage = parseInt(userProgress, 10);
+                progressBar.style.width = `${progressPercentage}%`;
+            }
+        }
+
+        // Example: Call this function when the user completes Unit 6
+        markUnitComplete(6);
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3NTGCB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+</html>
